@@ -1,0 +1,42 @@
+<!DOCYTYPE HTML>
+<html>
+	<head>
+		<title>Jenyfa Duncan - I don't know (original) | SpezTunes Store</title>
+		<link rel="stylesheet" type="text/css" href="https://spez-inc.github.io/speztunes-store/css/style.css">
+	</head>
+	
+	<body>
+		<img id="trackimage" src="track.png" align="left" height="85px;">
+			<button flatuistyle="get" onclick="downloadmp3();" style="position: relative; margin-top: 16px; float: right;">DOWNLOAD</button>
+			<button flatuistyle="text" id="playpause" onclick="playaudio();" style="position: relative; margin-top: 16px; margin-right: 16px; float: right;">Play</button>
+			<h1 id="trackname">I don't know (original)</h1>
+			<h3 id="artistname">Jenyfa Duncan</h3>
+		</img>
+		
+		<audio id="trackdemo" src="track.mp3" />
+		
+		<script>
+			// preview.js
+			// (C) 2019 Spez Inc. Some Rights Reserved.
+
+			// Get Objects
+			var trackname = document.getElementById("trackname");
+			var artist = document.getElementById("artistname");
+			var trackdemo = document.getElementById("trackdemo");
+			var trackimage = document.getElementById("trackimage");
+			var playpause = document.getElementById("playpause");
+
+			function playaudio() {
+				trackdemo.play();
+				playpause.innerHTML = "Pause"
+				playpause.setAttribute("onclick", "pauseaudio();");
+			}
+
+			function pauseaudio() {
+				trackdemo.pause();
+				playpause.innerHTML = "Play"
+				playpause.setAttribute("onclick", "playaudio();");
+			}
+		</script>
+	</body>
+</html>
